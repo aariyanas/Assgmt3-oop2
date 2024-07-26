@@ -9,7 +9,7 @@ namespace Assignment_3_skeleton
     public interface LinkedListADT
     {
         //Checks if the list is empty.
-	    //return True if it is empty.
+        //return True if it is empty.
         bool IsEmpty();
 
         //Clears the list.

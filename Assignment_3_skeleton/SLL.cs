@@ -8,19 +8,21 @@ namespace Assignment_3_skeleton
 {
     public class SLL : LinkedListADT
     {
+        private LinkedListADT sllADT;
+
         public void Append(object data)
         {
-            throw new NotImplementedException();
+            sllADT.Append(data);
         }
 
         public void Clear()
         {
-            throw new NotImplementedException();
+            sllADT.Clear();
         }
 
         public bool Contains(object data)
         {
-            throw new NotImplementedException();
+            return sllADT.Contains(data);
         }
 
         public void Delete(int index)
@@ -40,12 +42,12 @@ namespace Assignment_3_skeleton
 
         public bool IsEmpty()
         {
-            throw new NotImplementedException();
+            return sllADT.IsEmpty();
         }
 
         public void Prepend(object data)
         {
-            throw new NotImplementedException();
+            sllADT.Prepend(data);
         }
 
         public void Replace(object data, int index)
@@ -60,7 +62,7 @@ namespace Assignment_3_skeleton
 
         public int Size()
         {
-            throw new NotImplementedException();
+            return sllADT.Size();
         }
     }
 }
