@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Node
+namespace Assignment_3_skeleton
 {
-    public Node()
+    public class Node
     {
 
     }
