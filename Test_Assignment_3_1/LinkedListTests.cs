@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NUnit.Framework;
 /*using static System.Runtime.InteropServices.JavaScript.JSType;*/
 
 namespace Test_Assignment_3
@@ -170,7 +171,7 @@ namespace Test_Assignment_3
             Assert.AreEqual("b", this.linkedList.Retrieve(1));
 
             // Test the third node value is e
-            Assert.Equals("e", this.linkedList.Retrieve(2));
+            Assert.AreEqual("e", this.linkedList.Retrieve(2));
 
             // Test the fourth node value is d
             Assert.AreEqual("d", this.linkedList.Retrieve(3));

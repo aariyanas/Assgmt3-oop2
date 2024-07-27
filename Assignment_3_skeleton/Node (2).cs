@@ -8,6 +8,9 @@ namespace Assignment_3_skeleton
 {
     public class Node
     {
-
+        public Node()
+        {
+            
+        }
     }
 }
