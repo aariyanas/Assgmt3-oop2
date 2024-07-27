@@ -57,11 +57,11 @@ namespace Assignment_3_skeleton
         public bool equals(Object obj)
         {
             if (!(obj is User))
-			return false;
+                return false;
 
             User other = (User)obj;
 
-            return Id == other.Id && Id.Equals(other.Name) && Id.Equals(other.Email);
+            return this.Id == other.Id && Name.Equals(other.Name) && Email.Equals(other.Email);
         }
     }
 }

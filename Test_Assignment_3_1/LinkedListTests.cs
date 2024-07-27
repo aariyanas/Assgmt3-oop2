@@ -234,5 +234,72 @@ namespace Test_Assignment_3
             string value = (string)this.linkedList.Retrieve(1);
             Assert.AreEqual("b", value);
         }
+
+        //test node creation and equality
+        [Test]
+        public void TestGetNode()
+        {
+            Node a = new Node("a");
+            Node b = new Node("b");
+            Node c = new Node("c");
+
+            this.linkedList.Append(a);
+            this.linkedList.Append(b);
+            this.linkedList.Append(c);
+
+            Assert.IsFalse(this.linkedList.IsEmpty());
+            Assert.AreEqual(a, this.linkedList.Retrieve(0));
+            Assert.AreEqual(b, this.linkedList.Retrieve(1));
+            Assert.AreEqual(c, this.linkedList.Retrieve(2));
+        }
+
+        //test that clearing an already empty list doesn't change anything
+        [Test]
+        public void TestClearEmptyList()
+        {
+            this.linkedList.Clear();
+            Assert.IsTrue(this.linkedList.IsEmpty());
+
+            this.linkedList.Clear();
+            Assert.IsFalse(!this.linkedList.IsEmpty());
+        }
+
+        [Test]
+        public void TestNodeValuesSame()
+        {
+            this.linkedList.Append("a");
+            this.linkedList.Append("b");
+            this.linkedList.Append("a");
+
+            Assert.IsTrue(this.linkedList.Retrieve(0) == this.linkedList.Retrieve(2));
+            Assert.IsFalse(this.linkedList.Retrieve(0) == this.linkedList.Retrieve(1));
+        }
+
+        [Test]
+        public void TestRetrieveException()
+        {
+            this.linkedList.Append("a");
+            this.linkedList.Append("b");
+            this.linkedList.Append("c");
+            Assert.Throws<IndexOutOfRangeException>(() => linkedList.Retrieve(3));
+        }
+
+        [Test]
+        public void TestReplaceException()
+        {
+            this.linkedList.Append("a");
+            this.linkedList.Append("b");
+            this.linkedList.Append("c");
+            Assert.Throws<IndexOutOfRangeException>(() => linkedList.Replace("n", 3));
+        }
+
+        [Test]
+        public void TestDeleteException()
+        {
+            this.linkedList.Append("a");
+            this.linkedList.Append("b");
+            this.linkedList.Append("c");
+            Assert.Throws<IndexOutOfRangeException>(() => linkedList.Delete(5));
+        }
     }
 }
