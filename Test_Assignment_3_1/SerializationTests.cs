@@ -9,7 +9,7 @@ namespace Test_Assignment_3
 {
     public class SerializationTests
     {
-        private List<User> users;
+        private List<User> users = new List<User>();
         private readonly string testFileName = "test_users.bin";
 
         [SetUp]
